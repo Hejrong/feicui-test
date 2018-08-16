@@ -22,6 +22,30 @@ body{
 .top .wrapp .logo{
 
 }
+/*视频播放开始*/
+.video{
+    display: relative;
+}
+.video .play{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 44%;
+    top: 23%;
+    border-radius: 50%;
+    background-color: #000;
+    opacity: 0.6;
+}
+.video .play span{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent #cac5c2;
+    margin-top: 27%;
+    margin-left: 41%;
+}
 /* 轮播图开始 */
 .bar{
     margin-top: 10px;
@@ -167,10 +191,39 @@ body{
     float: left;
     cursor: poiter;
 }
+.buy-2 .con ul li .img{
+    position: relative;
+}
 .buy-2 .con ul li .img img{
     width: 95%;
     margin-left: 4px;
 }
+.buy-2 .con ul li .img video{
+    width: 162px;
+    margin-left: 14px;
+    height: 111px; 
+}
+.buy-2 .con ul li .img .play{
+        width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 38%;
+    top: 31%;
+    border-radius: 50%;
+    background-color: #000;
+    opacity: 0.6;
+}
+.buy-2 .con ul li .img .play span{
+        display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 9px;
+    border-style: solid;
+    border-color: transparent transparent transparent #cac5c2;
+    margin-top: 29%;
+    margin-left: 41%;
+}
+ 
 .buy-2 .con ul li .title{
     width: 96%;
     margin-left: 2%;

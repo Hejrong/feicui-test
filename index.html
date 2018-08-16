@@ -15,6 +15,18 @@
             <div class="logo"></div>
         </div>
     </div>
+    <div class="video">
+         <div class="play">
+            <span></span>
+        </div>
+        <video id="video1" width="420" style="margin-top:15px;">
+            
+            <source src="./image/feicuishipin.mp4" type="video/mp4" />
+        </video>
+    </div>
+        <script src="js/jquery.js"></script>
+
+    
     <!-- 轮播图 -->
     <div class="bar">
         <img src="http://img.yimianmian.com/data/afficheimg/category-16.jpg" alt="">
@@ -71,6 +83,7 @@
                     <img src="http://img.yimianmian.com/images/201301/thumb_img/13346_thumb_G_1358803533799.jpg" alt="">
                     <span>￥1200</span>
                 </li>
+
                 <li>
                     <img src="http://img.yimianmian.com/images/201301/thumb_img/13346_thumb_G_1358803533799.jpg" alt="">
                     <span>￥1200</span>
@@ -88,6 +101,35 @@
         </a>
         <div class="con">
             <ul>
+                <li>
+                    <div class="img">
+                        <div class="play">
+                         <span></span>
+                         </div>
+                        <video id="play">
+                            <source src="./image/feicuishipin.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="title">
+                        <h3>天然缅甸老坑翡翠A货糯种翡翠手镯 方镯 内径51mm</h3>
+                    </div>
+                    <div class="bot">
+                        <em>￥1200</em>
+                        <span>fdsfas</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="img">
+                        <video src="./image/feicuishipin.mp4"></video>
+                    </div>
+                    <div class="title">
+                        <h3>天然缅甸老坑翡翠A货糯种翡翠手镯 方镯 内径51mm</h3>
+                    </div>
+                    <div class="bot">
+                        <em>￥1200</em>
+                        <span>fdsfas</span>
+                    </div>
+                </li>
                 <li>
                     <div class="img">
                         <img src="http://img.yimianmian.com/images/201301/thumb_img/13346_thumb_G_1358803533799.jpg" alt="">
@@ -351,8 +393,37 @@
             <span></span>
         </div>
     </a>
-    <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
+    <script type="text/javascript">
+        var myVideo=document.getElementById("video1"),
+            video1 = document.getElementById('play'),
+            play = document.getElementsByClassName('play')[0],
+            play1 = document.getElementsByClassName('play')[1],
+            n = 0,
+            n1 = 0;
+        myVideo.onclick=function(){
+            n++;
+            if(n % 2 == 1){
+                this.play();
+                play.style.display='none';
+            }else{
+                this.pause();
+                play.style.display='inline-block';
+            }
+            myVideo.loop=true;
+        }
+        video1.onclick=function(){
+            n1++;
+            if(n1 % 2 == 1){
+                this.play();
+                play1.style.display='none';
+            }else{
+                this.pause();
+                play1.style.display='inline-block';
+            }
+            this.loop=true;
+        }
+    </script> 
 </body>
 
 </html> 
