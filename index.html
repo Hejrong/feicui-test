@@ -12,24 +12,32 @@
 <body>
     <div class="top">
         <div class="wrapp">
-            <div class="logo"></div>
+            <div class="logo">
+                <span></span>
+                <em></em>
+                <b></b>
+            </div>
         </div>
     </div>
     <div class="video">
          <div class="play">
             <span></span>
         </div>
-        <video id="video1" width="420" style="margin-top:15px;">
+        <video id="video1" style="margin-top:15px;">
             
             <source src="./image/feicuishipin.mp4" type="video/mp4" />
         </video>
     </div>
-        <script src="js/jquery.js"></script>
-
-    
     <!-- 轮播图 -->
     <div class="bar">
-        <img src="http://img.yimianmian.com/data/afficheimg/category-16.jpg" alt="">
+        <div class="lunbo"></div>
+        <ul>
+            <li class="pic select"></li>
+            <li class="pic"></li>
+            <li class="pic"></li>
+            <li class="pic"></li>
+            <li class="pic"></li>
+        </ul>
     </div>
     <!-- 菜单 -->
     <div class="nav">
@@ -393,37 +401,53 @@
             <span></span>
         </div>
     </a>
+    <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
-    <script type="text/javascript">
-        var myVideo=document.getElementById("video1"),
-            video1 = document.getElementById('play'),
-            play = document.getElementsByClassName('play')[0],
-            play1 = document.getElementsByClassName('play')[1],
-            n = 0,
-            n1 = 0;
-        myVideo.onclick=function(){
-            n++;
-            if(n % 2 == 1){
-                this.play();
-                play.style.display='none';
-            }else{
-                this.pause();
-                play.style.display='inline-block';
+    <script>
+        var lunbo = document.getElementsByClassName('lunbo')[0],
+            bar = document.getElementsByClassName('bar')[0],
+            sel = document.getElementsByClassName('pic'),
+            rel = $('.pic')[1];
+            count = 1;
+        // 点击了li跳转图片
+        $('.bar ul').find('li').on('click', function(){
+            lunbo.style.left = (-414 * ($(this).index())) + 'px';
+            $(".bar ul li:eq("+ $(this).index() +")").addClass("select").siblings().removeClass("select");
+            count = $(this).index();
+        })
+        bar.timerId = setInterval(function () {
+            if(count == 5){
+            lunbo.style.left = 0 + 'px';
+            count = 0;
+           }    
+            $(".bar ul li:eq("+ count +")").addClass("select").siblings().removeClass("select");
+           animate(lunbo, -414 * count, -100);
+        },4000);
+        // animate动画函数 target是移动的距离 speed是移动的速度
+        function animate(element, target, speed) {
+            if (element.timerId) {
+                clearInterval(element.timerId);
+                timerId = null;
             }
-            myVideo.loop=true;
+
+            element.timerId = setInterval(function () {
+                // 步进 每次移动的距离
+                var step = speed;
+                // 盒子当前的位置
+                var current = element.offsetLeft;
+
+                if(current <= target) {
+                    // 让定时器停止
+                    clearInterval(element.timerId);
+                    element.style.left = target + 'px';
+                    return count ++;
+                }
+                // 移动盒子
+                current += step;
+                element.style.left = current + 'px';
+            },30)
         }
-        video1.onclick=function(){
-            n1++;
-            if(n1 % 2 == 1){
-                this.play();
-                play1.style.display='none';
-            }else{
-                this.pause();
-                play1.style.display='inline-block';
-            }
-            this.loop=true;
-        }
-    </script> 
+    </script>
 </body>
 
 </html> 
