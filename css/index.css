@@ -162,7 +162,6 @@ body{
     margin:0 auto;
     position:relative;
     overflow:hidden;
-    z-index:1;
     width:100%;
     background-color: #fff;
 }
@@ -385,4 +384,53 @@ body{
     position: relative;
     top: 8px;
     left: 7px;
+}
+#tiaozhuan{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,.7);
+    display: none;
+}
+.tz{
+    display:block!important;
+}
+#tiaozhuan .ew{
+    width: 80%;
+    height: 500px;
+    position: fixed;
+    top: 20%;
+    left: 7%;
+}
+#tiaozhuan .ew .gb{
+    width: 100%;
+    background: #fff;
+    height: 30px;
+}
+/*#tiaozhuan .ew .gb span{
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    color: #eee;
+    text-align: center;
+    display: inline-block;
+    line-height: 20px;
+}*/
+#tiaozhuan .ew .wx-ew{
+    background: url(../image/weixin.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 404px;
+}
+#tiaozhuan .ew span{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #d6d1d1;
+    height: 30px;
+    line-height: 30px;
+    font-size: 27px;
+    font-weight: 700;
 }
