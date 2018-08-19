@@ -98,8 +98,6 @@ body{
     height: 20px;
     position: relative;
     bottom: 11%;
-    /*border: 1px solid #f40;*/
-    z-index: 100;
     left: 39%;
 }
 .bar ul .pic{
@@ -462,19 +460,25 @@ body{
 }
 #tiaozhuan .ew .gb{
     width: 100%;
-    background: #fff;
-    height: 30px;
+    height: 40px;
 }
-/*#tiaozhuan .ew .gb span{
+#tiaozhuan .ew .gb span{
     float: right;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     margin-top: 5px;
-    color: #eee;
+    color: #a59999;
     text-align: center;
     display: inline-block;
-    line-height: 20px;
-}*/
+    line-height: 40px;
+    font-size: 29px;
+    font-weight: 400;
+    margin-right: 2px;
+}
+#tiaozhuan .ew .gb span:after{
+    content: '';
+    clear: both;
+}
 #tiaozhuan .ew .wx-ew{
     background: url(../image/weixin.jpg) 0 0 no-repeat;
     background-size: 100% 100%;
@@ -485,11 +489,12 @@ body{
     display: inline-block;
     width: 100%;
     text-align: center;
-    color: #d6d1d1;
-    height: 30px;
-    line-height: 30px;
+    color: #d01414;
+    height: 42px;
+    line-height: 39px;
     font-size: 27px;
     font-weight: 700;
+    background-color: #fff;
 }
 #floot-er{
     width: 100%;
