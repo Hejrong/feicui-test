@@ -34,7 +34,6 @@
             <li class="pic"></li>
             <li class="pic"></li>
             <li class="pic"></li>
-            <li class="pic"></li>
         </ul>
     </div>
     <!-- 菜单 -->
@@ -402,13 +401,15 @@
             count = $(this).index();
         })
         bar.timerId = setInterval(function () {
-            if(count == 5){
-            lunbo.style.left = 0 + 'px';
-            count = 0;
-           }    
+             if(count >= 4){
+                lunbo.style.left = 0 + 'px';
+                count = 0;
+            }    
             $(".bar ul li:eq("+ count +")").addClass("select").siblings().removeClass("select");
            animate(lunbo, -414 * count, -100);
-        },8000);
+           console.log(count);
+          
+        },6000);
         // animate动画函数 target是移动的距离 speed是移动的速度
         function animate(element, target, speed) {
             if (element.timerId) {
