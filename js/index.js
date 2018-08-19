@@ -40,6 +40,9 @@ $('.con ul li ').find('.img').on('click', function () {
 $('#gb').on('click', function () {
   $('#tiaozhuan').removeClass("tz");
 });
+$('#floot-er').on('click', function () {
+  $('#tiaozhuan').addClass("tz");
+});
 
 //点击更多
  $('#more1').on('click', function() {
