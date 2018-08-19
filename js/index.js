@@ -1,30 +1,30 @@
-// function autoPlayMusic() {
-//     // 自动播放音乐效果，解决浏览器或者APP自动播放问题
-//     function musicInBrowserHandler() {
-//         musicPlay(true);
-//         document.body.removeEventListener('touchstart', musicInBrowserHandler);
-//     }
-//     document.body.addEventListener('touchstart', musicInBrowserHandler);
+function autoPlayMusic() {
+    // 自动播放音乐效果，解决浏览器或者APP自动播放问题
+    function musicInBrowserHandler() {
+        musicPlay(true);
+        document.body.removeEventListener('touchstart', musicInBrowserHandler);
+    }
+    document.body.addEventListener('touchstart', musicInBrowserHandler);
 
-//     // 自动播放音乐效果，解决微信自动播放问题
-//     function musicInWeixinHandler() {
-//         musicPlay(true);
-//         document.addEventListener("WeixinJSBridgeReady", function () {
-//             musicPlay(true);
-//         }, false);
-//         document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
-//     }
-//     document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
-// }
-// function musicPlay(isPlay) {
-//     var media = document.querySelector('#video1');
-//     if (isPlay && media.paused) {
-//         media.play();
-//     }
-//     if (!isPlay && !media.paused) {
-//         media.pause();
-//     }
-// }
+    // 自动播放音乐效果，解决微信自动播放问题
+    function musicInWeixinHandler() {
+        musicPlay(true);
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            musicPlay(true);
+        }, false);
+        document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+    }
+    document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+function musicPlay(isPlay) {
+    var media = document.querySelector('#video1');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
 // 点击图片跳二维码
 var img = $('.con ul li .img'),
   title = $('.con ul li .title'),
@@ -41,3 +41,16 @@ $('#gb').on('click', function () {
   $('#tiaozhuan').removeClass("tz");
 });
 
+//点击更多
+ $('#more1').on('click', function() {
+    $('#morelist1').toggle();
+ });
+ $('#more2').on('click', function() {
+    $('#morelist2').toggle();
+ });
+ $('#more3').on('click', function() {
+    $('#morelist3').toggle();
+ });
+ $('#more4').on('click', function() {
+    $('#morelist4').toggle();
+ });

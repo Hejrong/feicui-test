@@ -17,6 +17,10 @@ body{
     height: 55px;
     background: #03a01f;
 }
+.top .wrapp .logo{
+    width: 414px;
+    height: 55px;
+}
 .top .wrapp .logo span{
     display: inline-block;
     background: url(../image/logo.jpg) 0 0 no-repeat;
@@ -86,7 +90,7 @@ body{
 .bar .lunbo{
     width: 500%;
     height: 230px;
-    background: url(../image/lunbo-d.jpg) 0 0 no-repeat;
+    background: url(../image/lunbo-p.jpg) 0 0 no-repeat;
     position: relative;
 }
 .bar ul{
@@ -250,6 +254,7 @@ body{
 .buy-2 .con ul li .img img{
     width: 95%;
     margin-left: 4px;
+    height: 205px;
 }
 .buy-2 .con ul li .img video{
     width: 162px;
@@ -282,10 +287,10 @@ body{
     width: 96%;
     margin-left: 2%;
     overflow: hidden;
-    height: 42px;
+    height: 52px;
 }
 .buy-2 .con ul li .title h3{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
 }
 .buy-2 .con ul li .bot{
@@ -294,7 +299,7 @@ body{
 }
 .buy-2 .con ul li .bot span{
     color: #999595;
-    font-size: 14px;
+    font-size: 11px;
     float: right;   
 }
 .buy-2 .con ul li .bot em{
@@ -302,7 +307,7 @@ body{
     font-size: 14px;
     font-weight: 700;
 }
-.buy-2 .con .more{
+.buy-2 .con #more1{
     width: 90%;
     margin-left: 1.5%;
     border: 1px solid #cccccc;
@@ -313,6 +318,54 @@ body{
     line-height: 35px;
     font-size: 14px;
     cursor: pointer;
+}
+.buy-2 .con #more2{
+    width: 90%;
+    margin-left: 1.5%;
+    border: 1px solid #cccccc;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    color: #cccccc;
+    line-height: 35px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.buy-2 .con #more3{
+    width: 90%;
+    margin-left: 1.5%;
+    border: 1px solid #cccccc;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    color: #cccccc;
+    line-height: 35px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.buy-2 .con #more4{
+    width: 90%;
+    margin-left: 1.5%;
+    border: 1px solid #cccccc;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    color: #cccccc;
+    line-height: 35px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.buy-2 .con #morelist1{
+    display: none;
+}
+.buy-2 .con #morelist2{
+    display: none;
+}
+.buy-2 .con #morelist3{
+    display: none;
+}
+.buy-2 .con #morelist4{
+    display: none;
 }
 .floot{
     margin-top: 20px;
@@ -366,8 +419,8 @@ body{
     position: fixed;
     width: 38px;
     height: 38px;
-    right: 28px;
-    bottom: 48px;
+    right: 57px;
+    bottom: 65px;
     background-color: #000;
     opacity: 0.3;
     border-radius: 9px;
