@@ -473,7 +473,6 @@ body{
     line-height: 40px;
     font-size: 29px;
     font-weight: 400;
-    margin-right: 2px;
 }
 #tiaozhuan .ew .gb span:after{
     content: '';
@@ -483,7 +482,7 @@ body{
     background: url(../image/weixin.jpg) 0 0 no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 404px;
+    height: 339px;
 }
 #tiaozhuan .ew span{
     display: inline-block;
